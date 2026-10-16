@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laborator 02 – Obiecte, funcții și metode în JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Obiecte, funcții și metode în JavaScript</h1>
+    <p>Laborator 02 · Programarea client-side a site-urilor Web</p>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== EXERCIȚIUL 3 – JOCUL ===== -->
+    <section class="card game" id="joc">
+      <h2>Exercițiul 3 – Piatra, Hârtia, Foarfeca</h2>
+      <p class="hint">Câștigă primul jucător care ajunge la 5 victorii.</p>
+
+      <!-- Butoanele de alegere -->
+      <div class="choices">
+        <button class="choice-btn" data-choice="piatra">
+          <span class="icon">✊</span>Piatra
+        </button>
+        <button class="choice-btn" data-choice="hartia">
+          <span class="icon">✋</span>Hârtia
+        </button>
+        <button class="choice-btn" data-choice="foarfeca">
+          <span class="icon">✌️</span>Foarfeca
+        </button>
+      </div>
+
+      <!-- Alegerile din runda curentă -->
+      <div class="arena">
+        <div class="pick">
+          <div class="pick-label">Alegerea ta</div>
+          <div class="pick-value" id="player-choice">–</div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="pick">
+          <div class="pick-label">Alegerea calculatorului</div>
+          <div class="pick-value" id="computer-choice">–</div>
+        </div>
+      </div>
+
+      <!-- Rezultatul rundei -->
+      <div class="round-result" id="round-result">Alege Piatra, Hârtia sau Foarfeca</div>
+
+      <!-- Scorul -->
+      <div class="score">
+        <div class="score-box">
+          <div class="score-number" id="score-player">0</div>
+          <div class="score-label">Tu</div>
+        </div>
+        <div class="score-box">
+          <div class="score-number" id="score-draws">0</div>
+          <div class="score-label">Egalități</div>
+        </div>
+        <div class="score-box">
+          <div class="score-number" id="score-computer">0</div>
+          <div class="score-label">Calculator</div>
+        </div>
+      </div>
+
+      <p class="rounds">Runde jucate: <strong id="rounds">0</strong></p>
+      <p class="leader" id="leader-message"></p>
+      <p class="final" id="final-message" hidden></p>
+
+      <button class="new-game" id="new-game">🔄 Joc nou</button>
+    </section>
+
+    <!-- ===== EXERCIȚIILE 1 ȘI 2 ===== -->
+    <section class="card">
+      <h2>Exercițiul 1 – Funcție de calcul</h2>
+      <p>Funcția <code>calculateSum(a, b)</code> returnează suma a două numere. Rezultatele sunt afișate în consolă (F12 → Console) și aici:</p>
+      <pre class="output" id="ex1-result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Exercițiul 2 – Obiect cu metodă</h2>
+      <p>Obiectul <code>student</code> are proprietățile <code>name</code>, <code>age</code>, <code>grade</code> și metoda <code>introduce()</code>. Rezultatele sunt afișate în consolă și aici:</p>
+      <pre class="output" id="ex2-result"></pre>
+      <p class="answer">
+        <strong>Proprietate sau metodă?</strong> O proprietate păstrează o valoare (de exemplu <code>student.age</code>),
+        iar o metodă este o funcție a obiectului care execută o acțiune și se apelează cu paranteze
+        (de exemplu <code>student.introduce()</code>).
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="../">← Toate laboratoarele</a>
+  </footer>
+
+  <!-- JavaScript extern, conectat la sfârșitul paginii -->
+  <script src="script.js"></script>
+</body>
+</html>

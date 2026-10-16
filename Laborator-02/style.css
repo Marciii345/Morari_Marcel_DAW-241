@@ -1,0 +1,246 @@
+/* ===== Variabile de culoare ===== */
+:root {
+  --fundal: #f2f4f7;
+  --card: #ffffff;
+  --text: #1d2433;
+  --text-slab: #5b6578;
+  --accent: #2e5a8a;
+  --accent-inchis: #1f3a5f;
+  --bordura: #d9dfe8;
+  --verde: #1f8a4c;
+  --rosu: #c0392b;
+  --galben: #b7791f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fundal);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ===== Header și footer ===== */
+.header {
+  background: linear-gradient(135deg, var(--accent-inchis), var(--accent));
+  color: #ffffff;
+  text-align: center;
+  padding: 36px 16px 30px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+}
+
+.header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 16px 40px;
+}
+
+.footer a { color: var(--accent); }
+
+/* ===== Conținut ===== */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--bordura);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--accent-inchis);
+  font-size: 1.25rem;
+}
+
+code {
+  background-color: #eef2f7;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+
+.output {
+  background-color: #1d2433;
+  color: #d6e2f0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+}
+
+.answer {
+  background-color: #f7f9fc;
+  border-left: 4px solid var(--accent);
+  padding: 10px 14px;
+  margin: 0;
+}
+
+/* ===== Jocul ===== */
+.game { text-align: center; }
+
+.hint {
+  color: var(--text-slab);
+  margin-top: -6px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.choice-btn {
+  width: 120px;
+  padding: 14px 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-inchis);
+  background-color: #e8eef6;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.choice-btn .icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+}
+
+.choice-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background-color: #dbe5f2;
+}
+
+.choice-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 10px 0 14px;
+}
+
+.pick {
+  flex: 1;
+  max-width: 220px;
+  background-color: #f7f9fc;
+  border: 1px solid var(--bordura);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.pick-label {
+  font-size: 0.8rem;
+  color: var(--text-slab);
+}
+
+.pick-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.vs {
+  font-weight: bold;
+  color: var(--text-slab);
+}
+
+.round-result {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  color: var(--text-slab);
+}
+
+.round-result.win  { color: var(--verde);  background-color: #e6f4ec; }
+.round-result.lose { color: var(--rosu);   background-color: #fbeaea; }
+.round-result.draw { color: var(--galben); background-color: #fdf4e3; }
+
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.score-box {
+  width: 110px;
+  border: 1px solid var(--bordura);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-inchis);
+}
+
+.score-label {
+  font-size: 0.85rem;
+  color: var(--text-slab);
+}
+
+.rounds { margin: 14px 0 4px; }
+
+.leader {
+  color: var(--text-slab);
+  margin: 4px 0 12px;
+}
+
+.final {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #fff6d6;
+  border: 1px solid #f0d77a;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.new-game {
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.new-game:hover { background-color: var(--accent-inchis); }
+
+/* ===== Ecrane mici ===== */
+@media (max-width: 480px) {
+  .choice-btn { width: 96px; }
+  .arena { flex-direction: column; gap: 8px; }
+  .pick { width: 100%; max-width: none; }
+  .score-box { width: 90px; }
+}
