@@ -1,0 +1,316 @@
+/* ===== Variabile de culoare (temă întunecată, ca în exemplu) ===== */
+:root {
+  --fundal: #11151f;
+  --panou: #181e2b;
+  --card: #1f2638;
+  --card-sus: #252e45;
+  --bordura: #2f3a55;
+  --text: #e8ecf4;
+  --text-slab: #9aa5bd;
+  --accent: #5b8def;
+  --accent-inchis: #3f6fd1;
+  --verde-fundal: #1f3f33;
+  --verde-text: #8fe0b3;
+  --rosu-fundal: #3a2230;
+  --rosu-bordura: #6b3449;
+  --rosu-text: #f2a7b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: var(--fundal);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* ===== Header și footer ===== */
+.header {
+  text-align: center;
+  padding: 32px 16px 26px;
+  background: linear-gradient(135deg, #1b2440, #24345f);
+  border-bottom: 1px solid var(--bordura);
+}
+
+.header h1 { margin: 0 0 6px; font-size: 1.8rem; }
+.header p  { margin: 0; color: var(--text-slab); }
+
+.footer {
+  text-align: center;
+  padding: 16px 16px 40px;
+}
+
+.footer a { color: var(--accent); }
+
+/* ===== Structura paginii ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.sus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.panou {
+  flex: 1 1 340px;
+  background-color: var(--panou);
+  border: 1px solid var(--bordura);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+/* ===== Formular ===== */
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-slab);
+  margin: 10px 0 4px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background-color: var(--card);
+  border: 1px solid var(--bordura);
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+.doua {
+  display: flex;
+  gap: 12px;
+}
+
+.doua > div { flex: 1; }
+
+.btn-principal {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-principal:hover { background-color: var(--accent-inchis); }
+
+.mesaj {
+  min-height: 1.3em;
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+
+.mesaj.succes { color: var(--verde-text); }
+.mesaj.eroare { color: var(--rosu-text); }
+
+/* ===== Controale Flexbox ===== */
+.eticheta {
+  margin: 12px 0 6px;
+  font-family: Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.eticheta span {
+  font-family: inherit;
+  color: var(--text-slab);
+}
+
+.grup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.grup button {
+  padding: 6px 10px;
+  font-family: Consolas, monospace;
+  font-size: 0.82rem;
+  color: var(--text);
+  background-color: var(--card);
+  border: 1px solid var(--bordura);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.grup button:hover { border-color: var(--accent); }
+
+.grup button.activ {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.cod {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #c9d6f0;
+  background-color: #0c1018;
+  border: 1px solid var(--bordura);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* ===== Lista de studenți ===== */
+.titlu-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.titlu-lista h2 { margin: 0; }
+
+.numar {
+  margin: 0;
+  padding: 6px 14px;
+  background-color: var(--panou);
+  border: 1px solid var(--bordura);
+  border-radius: 999px;
+}
+
+/* Containerul flex – proprietățile sunt schimbate din JavaScript */
+.carduri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+  min-height: 360px;
+  padding: 16px;
+  border: 1px dashed var(--bordura);
+  border-radius: 14px;
+}
+
+/* Cu nowrap, containerul se derulează orizontal */
+.carduri.fara-wrap { overflow-x: auto; }
+
+/* ===== Cardul unui student ===== */
+.card {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: linear-gradient(160deg, var(--card-sus), var(--card));
+  border: 1px solid var(--bordura);
+  border-radius: 14px;
+}
+
+.card-antet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  flex: 0 0 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: #2e3a5c;
+  border-radius: 12px;
+}
+
+.nume {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.grupa {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-slab);
+}
+
+.detalii {
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+
+.rand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  font-size: 0.9rem;
+}
+
+.rand dt { color: var(--text-slab); }
+
+.rand dd {
+  margin: 0;
+  text-align: right;
+}
+
+.varsta { font-weight: bold; }
+
+.statut {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  color: var(--verde-text);
+  background-color: var(--verde-fundal);
+  border-radius: 999px;
+}
+
+.btn-sterge {
+  width: 100%;
+  padding: 7px;
+  font-size: 0.9rem;
+  color: var(--rosu-text);
+  background-color: var(--rosu-fundal);
+  border: 1px solid var(--rosu-bordura);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-sterge:hover { background-color: #4d2a3d; }
+
+.lista-goala {
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-slab);
+}
+
+/* ===== Ecrane mici ===== */
+@media (max-width: 480px) {
+  .card { flex-basis: 100%; }
+  .carduri.fara-wrap .card { flex-basis: 240px; }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laborator 05 – Lista de studenți și CSS Flexbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Gestionarea listei de studenți</h1>
+    <p>Laborator 05 · Aranjarea cardurilor cu CSS Flexbox</p>
+  </header>
+
+  <main class="container">
+
+    <div class="sus">
+
+      <!-- ===== SARCINA 2 – FORMULARUL ===== -->
+      <section class="panou">
+        <h2>Adaugă student</h2>
+        <form id="form-student" novalidate>
+          <label for="nume">Nume și prenume</label>
+          <input type="text" id="nume" placeholder="ex. Ion Cojocaru">
+
+          <div class="doua">
+            <div>
+              <label for="grupa">Grupa</label>
+              <input type="text" id="grupa" placeholder="ex. PR-232">
+            </div>
+            <div>
+              <label for="varsta">Vârsta</label>
+              <input type="number" id="varsta" min="14" max="100" step="1" placeholder="14–100">
+            </div>
+          </div>
+
+          <label for="specialitate">Specialitatea</label>
+          <input type="text" id="specialitate" placeholder="ex. Programare">
+
+          <label for="avatar">Avatar</label>
+          <select id="avatar">
+            <option value="👨‍🎓">👨‍🎓 Student</option>
+            <option value="👩‍🎓">👩‍🎓 Studentă</option>
+            <option value="👨‍💻">👨‍💻 Programator</option>
+            <option value="👩‍💻">👩‍💻 Programatoare</option>
+            <option value="👨‍🔬">👨‍🔬 Cercetător</option>
+            <option value="👩‍🔬">👩‍🔬 Cercetătoare</option>
+          </select>
+
+          <button type="submit" class="btn-principal">Adaugă student</button>
+          <p class="mesaj" id="mesaj-formular"></p>
+        </form>
+      </section>
+
+      <!-- ===== SARCINA 4 – CONTROALELE FLEXBOX ===== -->
+      <section class="panou">
+        <h2>Perspectiva cardurilor (Flexbox)</h2>
+
+        <p class="eticheta">justify-content <span>– axa principală</span></p>
+        <div class="grup" id="grup-justify">
+          <button data-valoare="flex-start" class="activ">flex-start</button>
+          <button data-valoare="center">center</button>
+          <button data-valoare="flex-end">flex-end</button>
+          <button data-valoare="space-between">space-between</button>
+          <button data-valoare="space-around">space-around</button>
+          <button data-valoare="space-evenly">space-evenly</button>
+        </div>
+
+        <p class="eticheta">align-items <span>– axa secundară</span></p>
+        <div class="grup" id="grup-align">
+          <button data-valoare="stretch" class="activ">stretch</button>
+          <button data-valoare="flex-start">flex-start</button>
+          <button data-valoare="center">center</button>
+          <button data-valoare="flex-end">flex-end</button>
+          <button data-valoare="baseline">baseline</button>
+        </div>
+
+        <p class="eticheta">flex-wrap</p>
+        <div class="grup" id="grup-wrap">
+          <button data-valoare="wrap" class="activ">wrap</button>
+          <button data-valoare="nowrap">nowrap</button>
+        </div>
+
+        <p class="eticheta">gap: <strong id="valoare-gap">16px</strong></p>
+        <input type="range" id="gap" min="0" max="60" value="16">
+
+        <pre class="cod" id="cod-css"></pre>
+      </section>
+
+    </div>
+
+    <!-- ===== LISTA DE STUDENȚI ===== -->
+    <section>
+      <div class="titlu-lista">
+        <h2>Lista studenților</h2>
+        <p class="numar">Număr de studenți: <strong id="numar-studenti">0</strong></p>
+      </div>
+      <div id="carduri" class="carduri"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="../">← Toate laboratoarele</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

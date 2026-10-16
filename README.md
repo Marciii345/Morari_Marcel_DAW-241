@@ -22,6 +22,7 @@
 | 01 | Recapitulare HTML – Republica Moldova, Norvegia și Suedia | HTML, CSS | [▶️ Vezi](https://marciii345.github.io/Morari_Marcel_DAW-241/Laborator-01/) | [📁 Cod](./Laborator-01) |
 | 02 | Obiecte, funcții și metode în JavaScript – jocul Piatra, Hârtia, Foarfeca | HTML, CSS, JavaScript | [▶️ Vezi](https://marciii345.github.io/Morari_Marcel_DAW-241/Laborator-02/) | [📁 Cod](./Laborator-02) |
 | 04 | Liste și metodele Array în JavaScript – lista de cumpărături și catalogul elevilor | HTML, CSS, JavaScript | [▶️ Vezi](https://marciii345.github.io/Morari_Marcel_DAW-241/Laborator-04/) | [📁 Cod](./Laborator-04) |
+| 05 | Gestionarea listei de studenți și aranjarea cardurilor cu CSS Flexbox | HTML, CSS (Flexbox), JavaScript | [▶️ Vezi](https://marciii345.github.io/Morari_Marcel_DAW-241/Laborator-05/) | [📁 Cod](./Laborator-05) |
 
 > Lista se completează pe măsură ce sunt realizate laboratoarele următoare.
 
@@ -41,7 +42,12 @@ Morari_Marcel_DAW-241/
 │   ├── script.js         ← codul JavaScript
 │   ├── style.css
 │   └── README.md
-└── Laborator-04/
+├── Laborator-04/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+│   └── README.md
+└── Laborator-05/
     ├── index.html
     ├── script.js
     ├── style.css
