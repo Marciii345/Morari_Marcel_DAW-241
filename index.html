@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recapitulare HTML – Republica Moldova, Norvegia și Suedia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f4f7;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .pagina {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background-color: #1f3a5f;
+      color: #ffffff;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 8px 0;
+    }
+
+    /* ===== MENIU ===== */
+    .meniu {
+      background-color: #2e5a8a;
+      position: sticky;
+      top: 0;
+    }
+
+    .meniu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .meniu a {
+      display: block;
+      padding: 12px 18px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .meniu a:hover {
+      background-color: #1f3a5f;
+    }
+
+    /* ===== CONȚINUT ===== */
+    .continut {
+      padding: 10px 20px;
+    }
+
+    .tara {
+      border: 1px solid #d0d7e2;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .tara h2 {
+      margin-top: 0;
+      color: #1f3a5f;
+      border-bottom: 2px solid #2e5a8a;
+      padding-bottom: 6px;
+    }
+
+    .imagini {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      margin: 12px 0;
+    }
+
+    .imagini img {
+      height: 120px;
+    }
+
+    .inapoi {
+      text-align: right;
+    }
+
+    /* ===== STEAGURI (tabele) ===== */
+    .steag {
+      border-collapse: collapse;
+      table-layout: fixed;
+      border: 1px solid #888888;
+    }
+
+    .steag td {
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .albastru-md { background-color: #0046ae; }
+    .galben-md   { background-color: #ffd200; }
+    .rosu-md     { background-color: #cc092f; }
+
+    .rosu-no     { background-color: #ba0c2f; }
+    .alb-no      { background-color: #ffffff; }
+    .albastru-no { background-color: #00205b; }
+
+    .albastru-se { background-color: #006aa7; }
+    .galben-se   { background-color: #fecc02; }
+
+    /* ===== TABEL COMPARATIV ===== */
+    .comparativ {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 20px 0;
+    }
+
+    .comparativ caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    .comparativ th,
+    .comparativ td {
+      border: 1px solid #b0b8c4;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .comparativ thead th {
+      background-color: #2e5a8a;
+      color: #ffffff;
+    }
+
+    .comparativ tbody th {
+      background-color: #e8eef6;
+    }
+
+    .comparativ td.comun {
+      text-align: center;
+      background-color: #f7f9fc;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #1f3a5f;
+      color: #ffffff;
+      text-align: center;
+      padding: 16px 20px;
+    }
+
+    .footer a {
+      color: #ffd200;
+    }
+  </style>
+</head>
+<body>
+  <div class="pagina" id="sus">
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+      <div class="header-continut">
+        <h1>Trei țări europene: Republica Moldova, Norvegia și Suedia</h1>
+        <p>Recapitulare HTML – liste, tabele, div-uri și referințe interne și externe</p>
+      </div>
+    </header>
+
+    <!-- ========== MENIU ========== -->
+    <nav class="meniu">
+      <div class="meniu-continut">
+        <ul>
+          <li><a href="#partea1">Partea 1 – Republica Moldova</a></li>
+          <li><a href="#partea2">Partea 2 – Norvegia</a></li>
+          <li><a href="#partea3">Partea 3 – Suedia</a></li>
+          <li><a href="#comparatie">Tabel comparativ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========== CONȚINUT ========== -->
+    <main class="continut">
+
+      <!-- ===== PARTEA 1 – REPUBLICA MOLDOVA ===== -->
+      <section id="partea1">
+        <div class="tara">
+          <article>
+            <h2>Partea 1 – Republica Moldova</h2>
+            <p>
+              Republica Moldova este un stat din Europa de Est, situat între România și Ucraina,
+              fără ieșire la mare. Capitala este orașul Chișinău. Țara și-a proclamat independența
+              la 27 august 1991 și este cunoscută pentru vinurile sale, mănăstirile vechi și
+              peisajele de pe malurile Nistrului și Prutului.
+            </p>
+
+            <div class="imagini">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Moldova.svg?width=200"
+                   alt="Stema Republicii Moldova">
+
+              <!-- Steagul Republicii Moldova: tricolor vertical albastru-galben-roșu -->
+              <table class="steag" style="width: 240px;" title="Steagul Republicii Moldova">
+                <colgroup>
+                  <col style="width: 80px;">
+                  <col style="width: 80px;">
+                  <col style="width: 80px;">
+                </colgroup>
+                <tr style="height: 120px;">
+                  <td class="albastru-md"></td>
+                  <td class="galben-md"></td>
+                  <td class="rosu-md"></td>
+                </tr>
+              </table>
+            </div>
+
+            <h3>Obiective turistice</h3>
+            <ul>
+              <li><strong>Orheiul Vechi</strong> – complex arheologic cu o mănăstire săpată în stâncă, pe valea Răutului</li>
+              <li><strong>Cetatea Soroca</strong> – fortăreață medievală de formă circulară, pe malul Nistrului</li>
+              <li><strong>Cricova</strong> – beciuri subterane de vinuri, cu galerii lungi de zeci de kilometri</li>
+              <li><strong>Mănăstirea Căpriana</strong> – una dintre cele mai vechi mănăstiri din Moldova</li>
+              <li><strong>Castel Mimi</strong> – castel și vinărie restaurată din satul Bulboaca</li>
+              <li><strong>Mănăstirea Țipova</strong> – cea mai mare mănăstire rupestră din estul Europei</li>
+            </ul>
+
+            <p>
+              Linkuri utile:
+              <a href="https://ro.wikipedia.org/wiki/Republica_Moldova" target="_blank" rel="noopener">Republica Moldova pe Wikipedia</a> |
+              <a href="https://moldova.travel/" target="_blank" rel="noopener">Moldova Travel</a>
+            </p>
+
+            <p class="inapoi"><a href="#sus">Înapoi sus ↑</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== PARTEA 2 – NORVEGIA ===== -->
+      <section id="partea2">
+        <div class="tara">
+          <article>
+            <h2>Partea 2 – Norvegia</h2>
+            <p>
+              Norvegia este o țară scandinavă din nordul Europei, cu capitala la Oslo.
+              Este faimoasă pentru fiordurile sale spectaculoase, aurora boreală, soarele de la miezul
+              nopții și munții acoperiți de zăpadă. Norvegia este o monarhie constituțională și
+              are unul dintre cele mai ridicate niveluri de trai din lume.
+            </p>
+
+            <div class="imagini">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Norway.svg?width=200"
+                   alt="Stema Norvegiei">
+
+              <!-- Steagul Norvegiei: cruce scandinavă albastră cu margine albă pe fond roșu -->
+              <table class="steag" style="width: 220px;" title="Steagul Norvegiei">
+                <colgroup>
+                  <col style="width: 60px;">
+                  <col style="width: 10px;">
+                  <col style="width: 20px;">
+                  <col style="width: 10px;">
+                  <col style="width: 120px;">
+                </colgroup>
+                <tr style="height: 60px;">
+                  <td class="rosu-no"></td>
+                  <td class="alb-no"></td>
+                  <td class="albastru-no"></td>
+                  <td class="alb-no"></td>
+                  <td class="rosu-no"></td>
+                </tr>
+                <tr style="height: 10px;">
+                  <td class="alb-no" colspan="2"></td>
+                  <td class="albastru-no"></td>
+                  <td class="alb-no" colspan="2"></td>
+                </tr>
+                <tr style="height: 20px;">
+                  <td class="albastru-no" colspan="5"></td>
+                </tr>
+                <tr style="height: 10px;">
+                  <td class="alb-no" colspan="2"></td>
+                  <td class="albastru-no"></td>
+                  <td class="alb-no" colspan="2"></td>
+                </tr>
+                <tr style="height: 60px;">
+                  <td class="rosu-no"></td>
+                  <td class="alb-no"></td>
+                  <td class="albastru-no"></td>
+                  <td class="alb-no"></td>
+                  <td class="rosu-no"></td>
+                </tr>
+              </table>
+            </div>
+
+            <h3>Activități pentru turiști</h3>
+            <ol start="3">
+              <li>Croazieră pe fiordurile Geirangerfjord și Nærøyfjord</li>
+              <li>Observarea aurorei boreale în Tromsø</li>
+              <li>Drumeție până la stânca Preikestolen</li>
+              <li>Călătorie cu trenul panoramic Flåm</li>
+              <li>Plimbare prin cartierul istoric Bryggen din Bergen</li>
+              <li>Schi în stațiunea Lillehammer</li>
+            </ol>
+
+            <p>
+              Linkuri utile:
+              <a href="https://ro.wikipedia.org/wiki/Norvegia" target="_blank" rel="noopener">Norvegia pe Wikipedia</a> |
+              <a href="https://www.visitnorway.com/" target="_blank" rel="noopener">Visit Norway</a>
+            </p>
+
+            <p class="inapoi"><a href="#sus">Înapoi sus ↑</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== PARTEA 3 – SUEDIA ===== -->
+      <section id="partea3">
+        <div class="tara">
+          <article>
+            <h2>Partea 3 – Suedia</h2>
+            <p>
+              Suedia este cea mai mare țară nordică ca suprafață, cu capitala la Stockholm.
+              Este cunoscută pentru pădurile și lacurile sale numeroase, designul modern,
+              inovația tehnologică și calitatea înaltă a vieții. Suedia este o monarhie
+              constituțională și membră a Uniunii Europene din 1995.
+            </p>
+
+            <div class="imagini">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Great_coat_of_arms_of_Sweden.svg?width=200"
+                   alt="Stema Suediei">
+
+              <!-- Steagul Suediei: cruce galbenă pe fond albastru (celule combinate cu colspan) -->
+              <table class="steag" style="width: 240px;" title="Steagul Suediei">
+                <colgroup>
+                  <col style="width: 75px;">
+                  <col style="width: 30px;">
+                  <col style="width: 135px;">
+                </colgroup>
+                <tr style="height: 60px;">
+                  <td class="albastru-se"></td>
+                  <td class="galben-se"></td>
+                  <td class="albastru-se"></td>
+                </tr>
+                <tr style="height: 30px;">
+                  <td class="galben-se" colspan="3"></td>
+                </tr>
+                <tr style="height: 60px;">
+                  <td class="albastru-se"></td>
+                  <td class="galben-se"></td>
+                  <td class="albastru-se"></td>
+                </tr>
+              </table>
+            </div>
+
+            <h3>Termeni asociați Suediei</h3>
+            <dl>
+              <dt>Stockholm</dt>
+              <dd>Capitala Suediei, construită pe 14 insule, supranumită „Veneția Nordului”.</dd>
+
+              <dt>IKEA</dt>
+              <dd>Companie de mobilier fondată în 1943 de Ingvar Kamprad, cunoscută în toată lumea.</dd>
+
+              <dt>Volvo</dt>
+              <dd>Marcă de automobile fondată în 1927 la Göteborg, renumită pentru siguranță.</dd>
+
+              <dt>ABBA</dt>
+              <dd>Formație pop care a câștigat concursul Eurovision în 1974 cu piesa „Waterloo”.</dd>
+
+              <dt>Premiul Nobel</dt>
+              <dd>Distincție creată prin testamentul lui Alfred Nobel; majoritatea premiilor se decernează la Stockholm.</dd>
+
+              <dt>Fika</dt>
+              <dd>Tradiția suedeză a pauzei de cafea cu prăjituri, petrecută împreună cu prietenii sau colegii.</dd>
+            </dl>
+
+            <p>
+              Linkuri utile:
+              <a href="https://ro.wikipedia.org/wiki/Suedia" target="_blank" rel="noopener">Suedia pe Wikipedia</a> |
+              <a href="https://visitsweden.com/" target="_blank" rel="noopener">Visit Sweden</a>
+            </p>
+
+            <p class="inapoi"><a href="#sus">Înapoi sus ↑</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== TABEL COMPARATIV ===== -->
+      <section id="comparatie">
+        <div class="tara">
+          <h2>Tabel comparativ</h2>
+          <table class="comparativ">
+            <caption>Comparație între cele trei țări (date aproximative)</caption>
+            <thead>
+              <tr>
+                <th>Criteriu</th>
+                <th>Republica Moldova</th>
+                <th>Norvegia</th>
+                <th>Suedia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Capitala</th>
+                <td>Chișinău</td>
+                <td>Oslo</td>
+                <td>Stockholm</td>
+              </tr>
+              <tr>
+                <th>Suprafața</th>
+                <td>≈ 33 800 km²</td>
+                <td>≈ 385 000 km²</td>
+                <td>≈ 450 000 km²</td>
+              </tr>
+              <tr>
+                <th>Populația</th>
+                <td>≈ 2,4 milioane</td>
+                <td>≈ 5,6 milioane</td>
+                <td>≈ 10,6 milioane</td>
+              </tr>
+              <tr>
+                <th>Limba oficială</th>
+                <td>română</td>
+                <td>norvegiană</td>
+                <td>suedeză</td>
+              </tr>
+              <tr>
+                <th>Moneda</th>
+                <td>leul moldovenesc (MDL)</td>
+                <td>coroana norvegiană (NOK)</td>
+                <td>coroana suedeză (SEK)</td>
+              </tr>
+              <tr>
+                <th>Forma de guvernământ</th>
+                <td>republică parlamentară</td>
+                <td class="comun" colspan="2">monarhie constituțională</td>
+              </tr>
+              <tr>
+                <th>Regiunea</th>
+                <td>Europa de Est</td>
+                <td class="comun" colspan="2">Peninsula Scandinavică (nordul Europei)</td>
+              </tr>
+              <tr>
+                <th>Steagul</th>
+                <td>tricolor vertical</td>
+                <td class="comun" colspan="2">cruce scandinavă</td>
+              </tr>
+              <tr>
+                <th>Membră a UE</th>
+                <td>nu (țară candidată)</td>
+                <td>nu (membră a SEE)</td>
+                <td>da (din 1995)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="inapoi"><a href="#sus">Înapoi sus ↑</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="footer-continut">
+        <p>Lucrare de laborator: Recapitulare HTML &copy; 2026</p>
+        <p><a href="#sus">Înapoi sus ↑</a></p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
